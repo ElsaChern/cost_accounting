@@ -1,8 +1,12 @@
 import React from 'react'
+import CostItem from './CostItem'
 
 const CostList = () => {
     return (
-        <div>CostList</div>
+        <>
+            <p>CostList</p>
+            <CostItem />
+        </>
     )
 }
 

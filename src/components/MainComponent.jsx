@@ -1,8 +1,16 @@
 import React from 'react'
+import CostActions from './Buttons/CostActions'
+import CostScale from './CostScale'
+import CostList from './CostList'
 
 const MainComponent = () => {
     return (
-        <p>Hello</p>
+        <>
+            <CostActions />
+            <CostScale />
+            <CostList />
+        </>
+
     )
 }
 
