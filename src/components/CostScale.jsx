@@ -2,7 +2,7 @@ import React from 'react'
 
 const CostScale = () => {
     return (
-        <div>CostScale</div>
+        <p>Scale</p>
     )
 }
 

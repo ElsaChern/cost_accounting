@@ -2,7 +2,11 @@ import React from 'react'
 
 const CostItem = () => {
     return (
-        <div>CostItem</div>
+        <>
+            <p>Data</p>
+            <p>Title</p>
+            <p>Price</p>
+        </>
     )
 }
 
