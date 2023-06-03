@@ -1,10 +1,8 @@
-import React from 'react'
-import CostForm from './CostForm'
+import React from "react";
+import CostForm from "./CostForm";
 
-const NewCost = () => {
-    return (
-        <CostForm />
-    )
-}
+const NewCost = ({ setNewCosts }) => {
+  return <CostForm setNewCosts={setNewCosts} />;
+};
 
-export default NewCost
+export default NewCost;

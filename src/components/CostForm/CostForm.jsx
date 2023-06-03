@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CostForm = () => {
+const CostForm = ({ setNewCosts }) => {
   const [userInput, setUserInput] = useState({
     name: "",
     sum: "",
@@ -36,7 +36,7 @@ const CostForm = () => {
       sum: userInput.sum,
       date: new Date(userInput.date),
     };
-    console.log(costData);
+    setNewCosts(costData);
     // How can I simplify this?
     setUserInput({
       ...userInput,
