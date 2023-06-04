@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import CostItem from "./CostItem";
 import CostFilter from "./CostFilter";
 
-const CostList = () => {
+const CostList = ({ costs }) => {
   const [selectedYear, setSelectedYear] = useState("2023");
-  console.log(selectedYear);
+  console.log(costs);
+
   return (
     <>
       <CostFilter
         setSelectedYear={setSelectedYear}
         selectedYear={selectedYear}
       />
-      <CostItem />
+      {costs.map((cost) => (
+        <CostItem
+          key={cost.title}
+          date={cost.date}
+          title={cost.title}
+          price={cost.price}
+        />
+      ))}
     </>
   );
 };

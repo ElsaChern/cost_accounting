@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-const CostForm = ({ setNewCosts }) => {
+const CostForm = ({ addCost }) => {
   const [userInput, setUserInput] = useState({
-    name: "",
-    sum: "",
+    title: "",
+    price: "",
     date: "",
   });
 
-  const nameChangeHandler = (e) => {
+  const titleChangeHandler = (e) => {
     setUserInput({
       ...userInput,
-      name: e.target.value,
+      title: e.target.value,
     });
   };
 
-  const sumChangeHandler = (e) => {
+  const priceChangeHandler = (e) => {
     setUserInput({
       ...userInput,
-      sum: e.target.value,
+      price: e.target.value,
     });
   };
 
@@ -31,17 +31,22 @@ const CostForm = ({ setNewCosts }) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
+    // let costData = {
+    //   title: userInput.title,
+    //   price: userInput.price,
+    //   date: new Date(userInput.date),
+    // };
+
     let costData = {
-      name: userInput.name,
-      sum: userInput.sum,
+      ...userInput,
       date: new Date(userInput.date),
     };
-    setNewCosts(costData);
+
+    addCost(costData);
     // How can I simplify this?
     setUserInput({
-      ...userInput,
-      name: "",
-      sum: "",
+      title: "",
+      price: "",
       date: "",
     });
   };
@@ -52,8 +57,8 @@ const CostForm = ({ setNewCosts }) => {
         <label>Название</label>
         <input
           type="text"
-          value={userInput.name}
-          onChange={nameChangeHandler}
+          value={userInput.title}
+          onChange={titleChangeHandler}
         ></input>
       </div>
       <div>
@@ -62,8 +67,8 @@ const CostForm = ({ setNewCosts }) => {
           type="number"
           min="0.01"
           step="0.01"
-          value={userInput.sum}
-          onChange={sumChangeHandler}
+          value={userInput.price}
+          onChange={priceChangeHandler}
         ></input>
       </div>
       <div>
