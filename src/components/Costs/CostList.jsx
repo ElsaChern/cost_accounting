@@ -4,7 +4,10 @@ import CostFilter from "./CostFilter";
 
 const CostList = ({ costs }) => {
   const [selectedYear, setSelectedYear] = useState("2023");
-  console.log(costs);
+
+  const filteredCosts = costs.filter((cost) => {
+    return cost.date.getFullYear().toString() === selectedYear;
+  });
 
   return (
     <>
@@ -12,14 +15,18 @@ const CostList = ({ costs }) => {
         setSelectedYear={setSelectedYear}
         selectedYear={selectedYear}
       />
-      {costs.map((cost) => (
-        <CostItem
-          key={cost.title}
-          date={cost.date}
-          title={cost.title}
-          price={cost.price}
-        />
-      ))}
+      {!filteredCosts.length ? (
+        <p>За данный период расходов не найдено</p>
+      ) : (
+        filteredCosts.map((cost) => (
+          <CostItem
+            key={cost.title}
+            title={cost.title}
+            price={cost.price}
+            date={cost.date}
+          />
+        ))
+      )}
     </>
   );
 };

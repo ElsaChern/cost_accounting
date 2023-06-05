@@ -6,19 +6,19 @@ import NewCost from "./CostForm/NewCost";
 const MainComponent = () => {
   const [costs, setCosts] = useState([
     {
-      date: new Date(2021, 2, 12),
       title: "Холодильник",
       price: 13.499,
+      date: new Date(2021, 2, 12),
     },
     {
-      date: new Date(2022, 5, 9),
       title: "Ноутбук",
       price: 233,
+      date: new Date(2021, 5, 9),
     },
     {
-      date: new Date(2023, 1, 2),
       title: "Чайник",
       price: 2.399,
+      date: new Date(2023, 1, 2),
     },
   ]);
 
