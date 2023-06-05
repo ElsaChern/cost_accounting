@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CostItem from "./CostItem";
 import CostFilter from "./CostFilter";
+import CostsDiagram from "./CostsDiagram";
 
 const CostList = ({ costs }) => {
   const [selectedYear, setSelectedYear] = useState("2023");
@@ -15,6 +16,7 @@ const CostList = ({ costs }) => {
         setSelectedYear={setSelectedYear}
         selectedYear={selectedYear}
       />
+      <CostsDiagram costs={filteredCosts} />
       {!filteredCosts.length ? (
         <p>За данный период расходов не найдено</p>
       ) : (
