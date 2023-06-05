@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import CostActions from "./Buttons/CostActions";
 import CostList from "./Costs/CostList";
 import NewCost from "./CostForm/NewCost";
 
@@ -29,7 +28,6 @@ const MainComponent = () => {
   return (
     <>
       <NewCost addCost={addCostsHandler} />
-      {/* <CostActions /> */}
       <CostList costs={costs} />
     </>
   );

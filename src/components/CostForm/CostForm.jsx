@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CostForm = ({ addCost }) => {
+const CostForm = ({ addCost, onCancel }) => {
   const [userInput, setUserInput] = useState({
     title: "",
     price: "",
@@ -30,20 +30,13 @@ const CostForm = ({ addCost }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
-    // let costData = {
-    //   title: userInput.title,
-    //   price: userInput.price,
-    //   date: new Date(userInput.date),
-    // };
-
     let costData = {
       ...userInput,
       date: new Date(userInput.date),
     };
 
     addCost(costData);
-    // How can I simplify this?
+    onCancel();
     setUserInput({
       title: "",
       price: "",
@@ -80,7 +73,7 @@ const CostForm = ({ addCost }) => {
         ></input>
       </div>
       <button type="submit">Добавить расход</button>
-      <button>Отмена</button>
+      <button onClick={onCancel}>Отмена</button>
     </form>
   );
 };
