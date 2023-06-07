@@ -2,25 +2,10 @@ import "../styles/@globals.sass";
 import React, { useState } from "react";
 import CostList from "./Costs/CostList";
 import NewCost from "./CostForm/NewCost";
+import INITIAL_STATE from "../store/store";
 
 const MainComponent = () => {
-  const [costs, setCosts] = useState([
-    {
-      title: "Холодильник",
-      price: 13.499,
-      date: new Date(2021, 2, 12),
-    },
-    {
-      title: "Ноутбук",
-      price: 233,
-      date: new Date(2021, 5, 9),
-    },
-    {
-      title: "Чайник",
-      price: 2.399,
-      date: new Date(2023, 1, 2),
-    },
-  ]);
+  const [costs, setCosts] = useState(INITIAL_STATE);
 
   const addCostsHandler = (newCost) => {
     setCosts([...costs, newCost]);
