@@ -1,4 +1,5 @@
 import React from "react";
+import "./CostFilter.sass";
 
 const CostFilter = ({ selectedYear, setSelectedYear }) => {
   const yearChangeHandler = (e) => {
@@ -6,8 +7,8 @@ const CostFilter = ({ selectedYear, setSelectedYear }) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="cost-filter">
+      <div className="control">
         <label>Фильтр по году</label>
         <select onChange={yearChangeHandler} value={selectedYear}>
           <option value="2023">2023</option>

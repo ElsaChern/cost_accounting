@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CostList.sass";
 import CostItem from "./CostItem";
 import CostFilter from "./CostFilter";
 import CostsDiagram from "./CostsDiagram";
@@ -11,14 +12,14 @@ const CostList = ({ costs }) => {
   });
 
   return (
-    <>
+    <div className="costs_list">
       <CostFilter
         setSelectedYear={setSelectedYear}
         selectedYear={selectedYear}
       />
       <CostsDiagram costs={filteredCosts} />
       {!filteredCosts.length ? (
-        <p>За данный период расходов не найдено</p>
+        <p className="empty_list">За данный период расходов не найдено</p>
       ) : (
         filteredCosts.map((cost) => (
           <CostItem
@@ -29,7 +30,7 @@ const CostList = ({ costs }) => {
           />
         ))
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./DiagramBar.css";
+import "./DiagramBar.sass";
 
 const DiagramBar = (props) => {
   let barFillHeight = "0%";
@@ -10,13 +10,10 @@ const DiagramBar = (props) => {
 
   return (
     <div className="diagram-bar">
-      <div className="diagram-bar__inner">
-        <div
-          className="diagram-bar__fill"
-          style={{ height: barFillHeight }}
-        ></div>
+      <div className="inner">
+        <div className="fill" style={{ height: barFillHeight }}></div>
       </div>
-      <div className="diagram-bar__label ">{props.label}</div>
+      <div className="label">{props.label}</div>
     </div>
   );
 };

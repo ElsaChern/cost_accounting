@@ -1,6 +1,6 @@
 import React from "react";
 import DiagramBar from "./DiagramBar";
-import "./Diagram.css";
+import "./Diagram.sass";
 
 const Diagram = (props) => {
   const dataValues = props.dataSets.map((dataSet) => dataSet.value);

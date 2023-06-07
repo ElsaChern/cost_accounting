@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CostForm.sass";
 
 const CostForm = ({ addCost, onCancel }) => {
   const [userInput, setUserInput] = useState({
@@ -46,34 +47,38 @@ const CostForm = ({ addCost, onCancel }) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <label>Название</label>
-        <input
-          type="text"
-          value={userInput.title}
-          onChange={titleChangeHandler}
-        ></input>
+      <div className="form_control">
+        <div>
+          <label>Название</label>
+          <input
+            type="text"
+            value={userInput.title}
+            onChange={titleChangeHandler}
+          ></input>
+        </div>
+        <div>
+          <label>Сумма</label>
+          <input
+            type="number"
+            min="0.01"
+            step="0.01"
+            value={userInput.price}
+            onChange={priceChangeHandler}
+          ></input>
+        </div>
+        <div>
+          <label>Дата</label>
+          <input
+            type="date"
+            value={userInput.date}
+            onChange={dateChangeHandler}
+          ></input>
+        </div>
       </div>
-      <div>
-        <label>Сумма</label>
-        <input
-          type="number"
-          min="0.01"
-          step="0.01"
-          value={userInput.price}
-          onChange={priceChangeHandler}
-        ></input>
+      <div className="action">
+        <button type="submit">Добавить расход</button>
+        <button onClick={onCancel}>Отмена</button>
       </div>
-      <div>
-        <label>Дата</label>
-        <input
-          type="date"
-          value={userInput.date}
-          onChange={dateChangeHandler}
-        ></input>
-      </div>
-      <button type="submit">Добавить расход</button>
-      <button onClick={onCancel}>Отмена</button>
     </form>
   );
 };
