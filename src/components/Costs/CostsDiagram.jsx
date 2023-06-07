@@ -1,4 +1,5 @@
 import React from "react";
+import "./CostsDiagram.sass";
 import Diagram from "../Diagram/Diagram";
 
 const CostsDiagram = (props) => {
@@ -23,7 +24,7 @@ const CostsDiagram = (props) => {
   }
 
   return (
-    <div>
+    <div className="diagram-container">
       <Diagram dataSets={diagramData} />
     </div>
   );

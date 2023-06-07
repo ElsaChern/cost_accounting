@@ -1,4 +1,5 @@
 import React from "react";
+import "./CostItem.sass";
 
 const CostItem = ({ date, title, price }) => {
   const year = date.getFullYear();
@@ -7,14 +8,14 @@ const CostItem = ({ date, title, price }) => {
 
   return (
     <>
-      <div>
-        <div>
-          <div>{year}</div>
-          <div>{month}</div>
-          <div>{day}</div>
+      <div className="cost_item">
+        <div className="cost_date">
+          <div className="year">{year}</div>
+          <div className="month">{month}</div>
+          <div className="day">{day}</div>
         </div>
-        <p>{title}</p>
-        <p>{price}р.</p>
+        <p className="description">{title}</p>
+        <div className="price">{price}р.</div>
       </div>
     </>
   );
