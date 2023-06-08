@@ -1,4 +1,3 @@
-import React from "react";
 import "./CostItem.sass";
 
 const CostItem = ({ date, title, price }) => {

@@ -1,5 +1,5 @@
 import "../styles/globals.sass";
-import React, { useState } from "react";
+import { useState } from "react";
 import CostList from "./Costs/CostList";
 import NewCost from "./CostForm/NewCost";
 import INITIAL_STATE from "../store/store";

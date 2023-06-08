@@ -1,4 +1,3 @@
-import React from "react";
 import "./CostFilter.sass";
 
 const CostFilter = ({ selectedYear, setSelectedYear }) => {

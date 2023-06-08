@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./CostList.sass";
 import CostItem from "./CostItem";
 import CostFilter from "./CostFilter";
