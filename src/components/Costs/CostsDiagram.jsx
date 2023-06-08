@@ -2,7 +2,7 @@ import React from "react";
 import "./CostsDiagram.sass";
 import Diagram from "../Diagram/Diagram";
 
-const CostsDiagram = (props) => {
+const CostsDiagram = ({ costs }) => {
   const diagramData = [
     { label: "Янв", value: "0" },
     { label: "Фев", value: "0" },
@@ -18,7 +18,7 @@ const CostsDiagram = (props) => {
     { label: "Дек", value: "0" },
   ];
 
-  for (let cost of props.costs) {
+  for (let cost of costs) {
     const costMonth = cost.date.getMonth();
     diagramData[costMonth].value += cost.price;
   }

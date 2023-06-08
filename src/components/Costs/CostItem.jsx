@@ -15,7 +15,7 @@ const CostItem = ({ date, title, price }) => {
           <div className="day">{day}</div>
         </div>
         <p className="description">{title}</p>
-        <div className="price">{price}р.</div>
+        <div className="price">{`${price} руб.`}</div>
       </div>
     </>
   );
