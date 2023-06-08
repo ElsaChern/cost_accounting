@@ -33,5 +33,6 @@
 <img width="833" alt="image" src="https://github.com/ElsaChern/cost_accounting/assets/94759165/9b2c3677-7151-4943-b1ae-b2a8a55c0f81">
 <img width="827" alt="image" src="https://github.com/ElsaChern/cost_accounting/assets/94759165/0ca0ad46-0a40-46fc-911f-812a7516af24">
 <img width="840" alt="image" src="https://github.com/ElsaChern/cost_accounting/assets/94759165/a4eca2f4-2de4-426e-a056-fa643c428375">
-<img width="840" alt="image" src="https://github.com/ElsaChern/cost_accounting/assets/94759165/ff89d9fc-8780-46aa-b962-404fde216da9">
+<img width="832" alt="image" src="https://github.com/ElsaChern/cost_accounting/assets/94759165/d1536999-4896-4472-a1bc-493b2a594d1b">
+
 
