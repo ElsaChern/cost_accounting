@@ -8,24 +8,10 @@ const CostForm = ({ addCost, onCancel }) => {
     date: "",
   });
 
-  const titleChangeHandler = (e) => {
+  const handleChange = (e) => {
     setUserInput({
       ...userInput,
-      title: e.target.value,
-    });
-  };
-
-  const priceChangeHandler = (e) => {
-    setUserInput({
-      ...userInput,
-      price: e.target.value,
-    });
-  };
-
-  const dateChangeHandler = (e) => {
-    setUserInput({
-      ...userInput,
-      date: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -52,26 +38,29 @@ const CostForm = ({ addCost, onCancel }) => {
           <label>Название</label>
           <input
             type="text"
+            name="title"
             value={userInput.title}
-            onChange={titleChangeHandler}
+            onChange={handleChange}
           ></input>
         </div>
         <div>
           <label>Сумма</label>
           <input
             type="number"
+            name="price"
             min="0.01"
             step="0.01"
             value={userInput.price}
-            onChange={priceChangeHandler}
+            onChange={handleChange}
           ></input>
         </div>
         <div>
           <label>Дата</label>
           <input
             type="date"
+            name="date"
             value={userInput.date}
-            onChange={dateChangeHandler}
+            onChange={handleChange}
           ></input>
         </div>
       </div>
