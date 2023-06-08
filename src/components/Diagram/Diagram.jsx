@@ -1,4 +1,3 @@
-import React from "react";
 import DiagramBar from "./DiagramBar";
 import "./Diagram.sass";
 
